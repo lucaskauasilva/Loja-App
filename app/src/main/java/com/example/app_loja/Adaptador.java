@@ -31,6 +31,12 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.NossoViewHolder>{
         // O segundo é a posição de cada item da listagem
 
         // Se o RecyclerView conter dez objetos para serem exibidos, então este método será chamado automaticamente dez vezes para criar cada item da listagem.
+
+        // Recuperamos um Produto do objeto List de acordo com a posição recebida no parâmetro
+        Produto produto = mListProduto.get(position);
+
+        holder.mTextViewDescricao.setText(produto.getDescricao());
+        holder.mTextViewPreco.setText(String.format("R$ %.2f", produto.getPreco()));
     }
 
     @Override
