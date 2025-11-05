@@ -59,4 +59,19 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.NossoViewHolder>{
             mTextViewPreco = itemView.findViewById(R.id.textPreco);
         }
     }
+
+    public void atualizarListagemCompleta(List<Produto> mListProduto) {
+        this.mListProduto = mListProduto;
+        notifyDataSetChanged();
+    }
+
+    public void inserirItemNaListagem(int position, List<Produto> mListProduto) {
+        this.mListProduto = mListProduto;
+        notifyItemInserted(position);
+    }
+
+    public void excluirItemDaListagem(int position) {
+        mListProduto.remove(position);
+        notifyItemRemoved(position);
+    }
 }
