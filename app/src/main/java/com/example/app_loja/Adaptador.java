@@ -55,8 +55,8 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.NossoViewHolder>{
             super(itemView);
             // Aqui devem ser declarados todas as referências do arquivo itens.xml
 
-            mTextViewDescricao = itemView.findViewById(R.id.textViewDescricao);
-            mTextViewPreco = itemView.findViewById(R.id.textViewPreco);
+            mTextViewDescricao = itemView.findViewById(R.id.textDescricao);
+            mTextViewPreco = itemView.findViewById(R.id.textPreco);
         }
     }
 }
